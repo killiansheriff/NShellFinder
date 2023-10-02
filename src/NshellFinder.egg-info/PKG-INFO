@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: NshellFinder
+Version: 0.0.5
+Summary: OVITO Python modifier to XXXs.
+Author-email: Killian Sheriff <ksheriff@mit.edu>
+Maintainer-email: Killian Sheriff <ksheriff@mit.edu>
+License: MIT License
+Project-URL: repository, https://github.com/killiansheriff/NshellFinder
+Keywords: ovito,python-modifier
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: ovito>=3.9.1
+
+# NShellFinder
+Ovito Python modifier to find the $n$th coordination shell neighbor atom indicies, for the fcc, bcc and hcp crystal structure. 
+

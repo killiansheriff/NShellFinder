@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/NshellFinder/__init__.py
+src/NshellFinder.egg-info/PKG-INFO
+src/NshellFinder.egg-info/SOURCES.txt
+src/NshellFinder.egg-info/dependency_links.txt
+src/NshellFinder.egg-info/entry_points.txt
+src/NshellFinder.egg-info/requires.txt
+src/NshellFinder.egg-info/top_level.txt
+tests/test_modifier.py

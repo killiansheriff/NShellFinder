@@ -1,0 +1,2 @@
+[OVITO.Modifier]
+Warren Cowley Parameters = NshellFinder:NshellFinder
