@@ -1,16 +1,14 @@
-import itertools
+
 import os
 
 import numpy as np
 from ovito.data import (
     CutoffNeighborFinder,
     DataCollection,
-    DataTable,
-    ElementType,
-    NearestNeighborFinder,
+
 )
 from ovito.pipeline import ModifierInterface
-from traits.api import Bool, Float, Int, List, String
+from traits.api import Float,  String
 
 
 class NshellFinder(ModifierInterface):
@@ -73,6 +71,6 @@ if __name__ == "__main__":
 
     dump = "/home/ksheriff/PAPERS/first_paper/03_mtp/data/dumps/dumps_mtp_mc/ordered_relaxation_20_1_300K.dump"
     pipeline = import_file(dump)
-    mod = MshellFinder(crystal_structure="fcc", cutoff=18.2)
+    mod = NshellFinder(crystal_structure="fcc", cutoff=18.2)
     pipeline.modifiers.append(mod)
     data = pipeline.compute()
