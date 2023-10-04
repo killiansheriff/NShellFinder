@@ -66,11 +66,4 @@ class NshellFinder(ModifierInterface):
         data.attributes["Neighbor indices per shell"] = neighbor_indices_per_shell
 
 
-if __name__ == "__main__":
-    from ovito.io import import_file
 
-    dump = "/home/ksheriff/PAPERS/first_paper/03_mtp/data/dumps/dumps_mtp_mc/ordered_relaxation_20_1_300K.dump"
-    pipeline = import_file(dump)
-    mod = NshellFinder(crystal_structure="fcc", cutoff=18.2)
-    pipeline.modifiers.append(mod)
-    data = pipeline.compute()

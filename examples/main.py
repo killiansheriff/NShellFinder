@@ -1,7 +1,3 @@
-# NShellFinder
-Ovito Python modifier to find the $n$th coordination shell neighbor atom indicies, for the fcc, bcc and hcp crystal structure. 
-
-```python
 from ovito.io import import_file
 
 from NshellFinder import NshellFinder
@@ -15,4 +11,3 @@ neighbor_indices_per_shell = data.attributes["Neighbor indices per shell"]
 
 first_nn = neighbor_indices_per_shell[0]
 second_nn = neighbor_indices_per_shell[1]
-```
