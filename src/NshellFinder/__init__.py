@@ -1,6 +1,7 @@
 import os
 
 import numpy as np
+import pkg_resources
 from ovito.data import CutoffNeighborFinder, DataCollection
 from ovito.pipeline import ModifierInterface
 from traits.api import Float, String
@@ -13,10 +14,16 @@ class NshellFinder(ModifierInterface):
     crystal_structure = String(value="fcc")
 
     def get_cumsum_atom_in_shell(self):
-        file_path = os.path.join(
-            os.path.dirname(__file__),
-            "shell_informations",
-            f"{self.crystal_structure}_shell_count.txt",
+        # file_path = os.path.join(
+        #     os.path.dirname(__file__),
+        #     "shell_informations",
+        #     f"{self.crystal_structure}_shell_count.txt",
+        # )
+        file_path = pkg_resources.resource_filename(
+            "NshellFinder",
+            os.path.join(
+                "shell_informations", f"{self.crystal_structure}_shell_count.txt"
+            ),
         )
 
         number_of_atoms_in_shells = np.loadtxt(file_path)
