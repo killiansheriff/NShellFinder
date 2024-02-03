@@ -2,7 +2,7 @@
 Ovito Python modifier to find the n-th coordination shell neighbor atom indicies, for the fcc, bcc and hcp crystal structure. 
 
 ## Utilisation 
-Here is an example on how to find the indices of nearest neighbors -- cluster by shells up to certain cutoff -- for the fcc crystal structure. 
+Here is an example on how to find the indices of nearest neighbors -- cluster by shells up to certain cutoff -- for the fcc crystal structure. The scrip can be found in the ``examples/`` folder.  
 
 ```python
 from ovito.io import import_file
