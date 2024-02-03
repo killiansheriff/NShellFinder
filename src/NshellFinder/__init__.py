@@ -15,8 +15,10 @@ class NshellFinder(ModifierInterface):
     def get_cumsum_atom_in_shell(self):
         file_path = os.path.join(
             os.path.dirname(__file__),
-            f"shell_informations/{self.crystal_structure}_shell_count.txt",
+            "shell_informations",
+            f"{self.crystal_structure}_shell_count.txt",
         )
+
         number_of_atoms_in_shells = np.loadtxt(file_path)
         cum_sum_atom_in_shell = np.zeros(len(number_of_atoms_in_shells) + 1)
         cum_sum_atom_in_shell[1:] = np.cumsum(number_of_atoms_in_shells)
