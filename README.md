@@ -17,7 +17,7 @@ neighbor_indices_per_shell = data.attributes["Neighbor indices per shell"]
 # (number of nearest neighbor shells up to cutoff, number of atoms, number of nearest neighbors in the shell)
 
 first_nn = neighbor_indices_per_shell[0] # (number of atoms, 12 first nearest neigbors)
-second_nn = neighbor_indices_per_shell[1] #(number of atoms, 6 second nearest neighbors)
+second_nn = neighbor_indices_per_shell[1] # (number of atoms, 6 second nearest neighbors)
 ```
 
 
