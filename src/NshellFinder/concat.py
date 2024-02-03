@@ -16,9 +16,11 @@ def concat_nshell_neighbor_idx(dump_files, cutoff, crystal_structure, nframe=0):
         pipe = import_file(
             dump_files[i]
         )  # don't import all at same type -- issue with multiple frame
-        pipe.modifiers.append(NshellFinder(cutoff=cutoff, crystal_structure=crystal_structure))
+        pipe.modifiers.append(
+            NshellFinder(cutoff=cutoff, crystal_structure=crystal_structure)
+        )
 
-        data = pipe.compute(0)
+        data = pipe.compute(nframe)
 
         count.append(data.particles.count)
         nn = data.attributes["Neighbor indices per shell"]
@@ -26,7 +28,6 @@ def concat_nshell_neighbor_idx(dump_files, cutoff, crystal_structure, nframe=0):
         indices.append(nn)
 
     max_nshell = len(indices[0])
-    N = np.sum(count)
 
     indices_n = []
     for n in range(max_nshell):

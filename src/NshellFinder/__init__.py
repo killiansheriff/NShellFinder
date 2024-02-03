@@ -1,14 +1,9 @@
-
 import os
 
 import numpy as np
-from ovito.data import (
-    CutoffNeighborFinder,
-    DataCollection,
-
-)
+from ovito.data import CutoffNeighborFinder, DataCollection
 from ovito.pipeline import ModifierInterface
-from traits.api import Float,  String
+from traits.api import Float, String
 
 
 class NshellFinder(ModifierInterface):
@@ -53,7 +48,9 @@ class NshellFinder(ModifierInterface):
 
         cum_sum_atom_in_shell = self.get_cumsum_atom_in_shell()
 
-        max_shell_given_cutoff = np.argmax(np.where(cum_sum_atom_in_shell <= len(neigh_idx[0])))
+        max_shell_given_cutoff = np.argmax(
+            np.where(cum_sum_atom_in_shell <= len(neigh_idx[0]))
+        )
 
         neighbor_indices_per_shell = []
 
@@ -64,6 +61,3 @@ class NshellFinder(ModifierInterface):
             neighbor_indices_per_shell.append(nshell_nn_indices)
 
         data.attributes["Neighbor indices per shell"] = neighbor_indices_per_shell
-
-
-

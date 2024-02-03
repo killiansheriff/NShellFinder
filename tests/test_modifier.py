@@ -26,7 +26,6 @@ def test_fcc(import_data: DataCollection):
 
     finder = NearestNeighborFinder(18, data)
     nn_idx, _ = finder.find_all()
-   
 
     first_nn_true = nn_idx[:, :12]
     second_nn_true = nn_idx[:, 12:]
