@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "NshellFinder"
 version = "0.0.5"
-description = "OVITO Python modifier to XXXs."
+description = "OVITO Python modifier to find n-th shell nearest neighbors."
 keywords = ["ovito", "python-modifier"]
 authors = [{name = "Killian Sheriff", email = "ksheriff@mit.edu"}]
 maintainers = [{name = "Killian Sheriff", email = "ksheriff@mit.edu"}]
