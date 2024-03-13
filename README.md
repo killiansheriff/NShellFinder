@@ -1,5 +1,5 @@
 # NShellFinder
-![PyPI Version](https://img.shields.io/pypi/v/nshellfinder.svg) ![PyPI Downloads](https://static.pepy.tech/badge/NshellFinder) ![tests](https://github.com/killiansheriff/NShellFinder/actions/workflows/python-tests.yml/badge.svg)
+![PyPI Version](https://img.shields.io/pypi/v/nshellfinder.svg) ![PyPI Downloads](https://static.pepy.tech/badge/nshellfinder) ![tests](https://github.com/killiansheriff/NShellFinder/actions/workflows/python-tests.yml/badge.svg)
 
 Ovito Python modifier to find the n-th coordination shell neighbors. 
 
